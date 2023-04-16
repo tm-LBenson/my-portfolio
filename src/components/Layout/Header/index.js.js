@@ -6,6 +6,7 @@ import DarkModeToggle from './DarkModeToggle';
 
 function Header() {
   const [isMobileScreen, setIsMobileScreen] = useState(false);
+  const [isScrollingUp, setIsScrollingUp] = useState(true);
 
   useEffect(() => {
     const handleResize = () => {
@@ -21,8 +22,25 @@ function Header() {
     };
   }, []);
 
+  useEffect(() => {
+    let lastScrollTop = 0;
+
+    const handleScroll = () => {
+      const currentScrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
+      setIsScrollingUp(currentScrollTop < lastScrollTop);
+      lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <header className="header">
+    <header className={`header${isScrollingUp ? '' : ' slide-up'}`}>
       <Link
         className="logo"
         href="/"

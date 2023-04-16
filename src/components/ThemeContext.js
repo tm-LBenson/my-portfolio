@@ -7,7 +7,7 @@ export function useTheme() {
 }
 
 export function ThemeProvider({ children }) {
-  const [theme, setTheme] = useState('theme-default');
+  const [theme, setTheme] = useState('dark-mode');
 
   useEffect(() => {
     document.body.className = theme;

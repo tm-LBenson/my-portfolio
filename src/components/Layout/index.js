@@ -7,7 +7,7 @@ function Layout({ children }) {
   return (
     <>
       <Header />
-      <main className={`${theme}`}>{children}</main>
+      <main className={`main${' '}${theme}`}>{children}</main>
       <Footer />
     </>
   );

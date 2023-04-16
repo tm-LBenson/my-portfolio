@@ -1,6 +1,7 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import MobileNav from './MobileNav';
 import DesktopNav from './DesktopNav';
+import Link from 'next/link';
 
 function Header() {
   const [isMobileScreen, setIsMobileScreen] = useState(false);
@@ -19,7 +20,19 @@ function Header() {
     };
   }, []);
 
-  return <header>{isMobileScreen ? <MobileNav /> : <DesktopNav />}</header>;
+  return (
+    <header className="header">
+      <Link
+        className="logo"
+        href="/"
+      >
+        Lewis Benson
+      </Link>
+      <nav className="nav">
+        {isMobileScreen ? <MobileNav /> : <DesktopNav />}
+      </nav>
+    </header>
+  );
 }
 
 export default Header;

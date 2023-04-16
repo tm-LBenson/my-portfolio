@@ -12,13 +12,16 @@ function DesktopNav() {
   ];
 
   return (
-    <nav>
+    <nav className="nav">
       <ul>
         {links.map((link, index) => (
-          <li key={index}>
+          <li
+            key={index}
+            className="nav-item"
+          >
             <a
               href={link.href}
-              className={link.cta ? 'cta-button' : ''}
+              className={link.cta ? 'cta-button nav-link' : 'nav-link'}
             >
               {link.text}
             </a>

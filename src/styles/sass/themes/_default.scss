@@ -16,4 +16,7 @@
     background-color: $portfolio-sidebar;
     color: $portfolio-text;
   }
+  .about-image::after {
+    border-color: $portfolio-secondary-light;
+  }
 }

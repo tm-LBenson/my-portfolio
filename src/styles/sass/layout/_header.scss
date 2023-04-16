@@ -2,15 +2,28 @@
 
 // Header container
 .header {
+  width: 100dvw;
   background-color: $header-bg-color;
   padding: $spacing-md 0;
-  position: relative;
-  z-index: 1000;
+  position: fixed;
+  top: -200px;
   display: flex;
   justify-content: space-between;
   padding: 2rem;
   align-items: center;
   font-size: 2.1rem;
+  transition: transform 0.3s ease-in-out;
+  padding-right: 4rem;
+}
+
+.header {
+  transform: translateY(200px);
+}
+
+// Add this to your _header.scss
+.header.slide-up {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
 }
 
 // Site logo
@@ -63,7 +76,7 @@
 }
 // Mobile navigation
 .hamburger-react {
-  z-index: 1000;
+  z-index: 5000;
   display: none;
   cursor: pointer;
 

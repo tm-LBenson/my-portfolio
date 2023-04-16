@@ -16,4 +16,13 @@
     background-color: darken($portfolio-sidebar, 20%);
     color: $portfolio-text-light;
   }
+
+  .about-image::after {
+    border-color: $portfolio-secondary-dark;
+  }
+  .cta-buttons {
+    .resume-button {
+      color: $portfolio-text-light;
+    }
+  }
 }

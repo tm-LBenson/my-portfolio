@@ -1,0 +1,47 @@
+.hero {
+  margin-top: 25rem;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1rem;
+
+  h1 {
+    margin: 0;
+    font-size: $font-size-base;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: $font-size-xxl;
+  }
+
+  h3 {
+    margin: 0;
+    font-size: $font-size-xl;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .resume-button {
+    @include button-variant($portfolio-text, transparent);
+    border: 2px solid $portfolio-text-light;
+    &:hover,
+    &:focus {
+      background-color: $portfolio-primary-light;
+      border-color: transparent;
+      color: $portfolio-cta-text;
+    }
+  }
+
+  .contact-button {
+    @include button-variant($portfolio-cta-text, $portfolio-secondary);
+    &:hover,
+    &:focus {
+      background-color: $portfolio-secondary-dark;
+    }
+  }
+}

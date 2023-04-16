@@ -6,6 +6,9 @@
   padding: $spacing-md 0;
   position: relative;
   z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  padding: 4rem;
 }
 
 // Site logo
@@ -26,6 +29,7 @@
   align-items: center;
   list-style: none;
   padding-left: 0;
+  margin-left: $spacing-lg;
 
   @media (max-width: $nav-breakpoint) {
     display: none;
@@ -74,5 +78,29 @@
     width: 100%;
     background-color: rgba($header-bg-color, 0.95);
     padding: $spacing-md 0;
+  }
+}
+
+// Desktop navigation
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: $spacing-md;
+
+  li {
+    display: inline-block;
+  }
+
+  .cta-button {
+    padding: $spacing-xs $spacing-md;
+    border-radius: $border-radius;
+    background-color: $portfolio-cta-background;
+    color: $portfolio-cta-text;
+    transition: background-color $transition-duration ease-in-out;
+
+    &:hover,
+    &:focus {
+      background-color: $portfolio-cta-background-hover;
+    }
   }
 }

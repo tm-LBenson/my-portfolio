@@ -1,0 +1,44 @@
+// _mobile-nav.scss
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($portfolio-text, 0.9);
+  z-index: 1000;
+  padding: $spacing-lg;
+  display: flex;
+  flex-direction: column;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  li {
+    margin-bottom: $spacing-md;
+  }
+
+  a {
+    color: $portfolio-cta-text;
+    text-decoration: none;
+    font-size: $font-size-md;
+    @include transition();
+
+    &:hover {
+      color: $portfolio-primary;
+    }
+  }
+
+  .cta-button {
+    @include button-variant($portfolio-primary, $portfolio-cta-text);
+    &:hover,
+    &:focus {
+      background-color: $portfolio-primary-light;
+    }
+  }
+}

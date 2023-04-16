@@ -13,7 +13,7 @@ function DesktopNav() {
 
   return (
     <div className="nav">
-      <ul class="nav-links">
+      <ul className="nav-links">
         {links.map((link, index) => (
           <li
             key={index}

@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "concurrently  \"npm:dev-server\" \"npm:open-browser\"",
+    "dev-server": "next dev",
+    "open-browser": "node -e \"const open = require('open'); open('http://localhost:3000')\"",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -16,5 +18,9 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "sass": "^1.62.0"
+  },
+  "devDependencies": {
+    "@iconify/react": "^4.1.0",
+    "concurrently": "^8.0.1"
   }
 }

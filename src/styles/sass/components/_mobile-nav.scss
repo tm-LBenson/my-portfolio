@@ -1,15 +1,20 @@
-// _mobile-nav.scss
 .mobile-nav {
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba($portfolio-text, 0.9);
-  z-index: 1000;
+  right: 0;
+  width: 80%;
+  height: 100dvh;
+  background-color: rgba($portfolio-text, 1);
+  z-index: 4900;
   padding: $spacing-lg;
   display: flex;
   flex-direction: column;
+  transition: transform 0.3s ease-in-out;
+  transform: translate3d(100%, 0, 0);
+
+  &.open {
+    transform: translate3d(0, 0, 0);
+  }
 
   ul {
     list-style: none;
@@ -21,6 +26,10 @@
 
   li {
     margin-bottom: $spacing-md;
+    a {
+      line-height: 5rem;
+      font-size: 3rem;
+    }
   }
 
   a {
@@ -41,4 +50,9 @@
       background-color: $portfolio-primary-light;
     }
   }
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100%;
 }

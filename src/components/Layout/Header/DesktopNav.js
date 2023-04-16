@@ -12,8 +12,8 @@ function DesktopNav() {
   ];
 
   return (
-    <nav className="nav">
-      <ul>
+    <div className="nav">
+      <ul className="nav-links">
         {links.map((link, index) => (
           <li
             key={index}
@@ -28,7 +28,7 @@ function DesktopNav() {
           </li>
         ))}
       </ul>
-    </nav>
+    </div>
   );
 }
 

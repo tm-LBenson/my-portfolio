@@ -1,15 +1,17 @@
 .about-section {
+  display: flex;
+  justify-content: center;
+
+  min-height: 100dvh;
+  position: relative;
+  z-index: 1;
   h2 {
     font-size: 4rem;
   }
-  display: flex;
-  justify-content: center;
-  padding: 2rem;
-  min-height: 100dvh;
-  z-index: -2100;
 }
 
 .about-container {
+  position: relative;
   display: flex;
   justify-content: space-between;
   max-width: 1200px;

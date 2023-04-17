@@ -18,6 +18,49 @@
     }
   }
 }
+.project-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  p,
+  ul {
+    list-style: none;
+    cursor: pointer;
+  }
+
+  color: black;
+  height: 500px;
+  padding: 2rem;
+  h3 {
+    font-size: 4rem;
+  }
+  position: relative;
+  z-index: 600;
+  button {
+    margin: 1rem;
+    width: 50%;
+    font-size: 2rem;
+  }
+}
+.project-content h3:hover span,
+.project-content ul:hover span,
+.project-content p:hover span {
+  background-color: #ffffff7b;
+  color: black;
+}
+
+.project-content h3 span,
+.project-content ul span,
+.project-content p span {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.project-image {
+  width: 350px;
+  z-index: 100;
+  position: absolute;
+  scale: 1.5;
+}
 
 .projects-container {
   width: 100%;

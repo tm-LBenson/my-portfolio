@@ -25,4 +25,21 @@
       color: $portfolio-text-light;
     }
   }
+
+  .project-card {
+    background-color: #333;
+    color: $portfolio-text-light;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .project-content {
+    color: $portfolio-text-light;
+  }
+
+  .project-content h3:hover span,
+  .project-content ul:hover span,
+  .project-content p:hover span {
+    background-color: rgba($portfolio-primary-dark, 0.8);
+    color: $portfolio-text-light;
+  }
 }

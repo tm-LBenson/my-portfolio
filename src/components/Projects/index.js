@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import projects from './projects';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-
+import { isMobile } from 'react-device-detect';
 function Projects() {
   const [hoveredProject, setHoveredProject] = useState(null);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -37,6 +37,27 @@ function Projects() {
     setMousePosition({ x: event.clientX, y: event.clientY });
   };
 
+  const handleTouchStart = (projectName) => {
+    if (isMobile) {
+      setHoveredProject(projectName);
+      document.addEventListener('touchmove', handleTouchMove);
+    }
+  };
+
+  const handleTouchEnd = () => {
+    if (isMobile) {
+      setHoveredProject(null);
+      document.removeEventListener('touchmove', handleTouchMove);
+    }
+  };
+
+  const handleTouchMove = (event) => {
+    setMousePosition({
+      x: event.touches[0].clientX,
+      y: event.touches[0].clientY,
+    });
+  };
+
   const imageVariants = {
     hidden: { opacity: 0, scale: 0.8 },
     visible: { opacity: 1, scale: 1 },
@@ -56,6 +77,8 @@ function Projects() {
               onClick={() => handleProjectClick(project.name)}
               onMouseEnter={() => handleMouseEnter(project.name)}
               onMouseLeave={handleMouseLeave}
+              onTouchStart={() => handleTouchStart(project.name)}
+              onTouchEnd={handleTouchEnd}
             >
               {hoveredProject === project.name && (
                 <motion.div

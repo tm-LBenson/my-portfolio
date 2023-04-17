@@ -35,7 +35,7 @@ function Projects() {
     <section className="projects-section">
       <div className="projects-container">
         <h2 className="projects-heading">
-          <span>Projects</span>
+          <span>Work I have done</span>
           <hr className="projects-divider" />
         </h2>
         <div className="projects-grid">

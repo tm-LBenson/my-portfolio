@@ -4,6 +4,8 @@ import projects from './projects';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { isMobile } from 'react-device-detect';
+import { Icon } from '@iconify/react';
+
 function Projects() {
   const [hoveredProject, setHoveredProject] = useState(null);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -105,6 +107,29 @@ function Projects() {
                 <h3 className="project-name">
                   <span>{project.name}</span>
                 </h3>
+                <Icon
+                  className="folder"
+                  width={'90px'}
+                  icon="material-symbols:folder-outline-rounded"
+                />
+                <div className="project-buttons">
+                  <Icon
+                    width={'35px'}
+                    className="icon"
+                    icon="mdi:github"
+                    onClick={(e) => handleViewCodeClick(e, project.githubUrl)}
+                  />
+                  {project.websiteUrl && (
+                    <Icon
+                      width={'35px'}
+                      className="icon"
+                      icon="octicon:link-external-16"
+                      onClick={(e) =>
+                        handleViewWebsiteClick(e, project.websiteUrl)
+                      }
+                    />
+                  )}
+                </div>
                 <p className="project-description">
                   <span>{project.description}</span>
                 </p>
@@ -115,25 +140,6 @@ function Projects() {
                     </li>
                   ))}
                 </ul>
-
-                <div className="project-buttons">
-                  {project.websiteUrl && (
-                    <button
-                      className="btn button"
-                      onClick={(e) =>
-                        handleViewWebsiteClick(e, project.websiteUrl)
-                      }
-                    >
-                      View Website
-                    </button>
-                  )}
-                  <button
-                    className="btn button"
-                    onClick={(e) => handleViewCodeClick(e, project.githubUrl)}
-                  >
-                    View Code
-                  </button>
-                </div>
               </div>
             </div>
           ))}

@@ -1,4 +1,4 @@
-import Layout from '@src/components/layout/Layout';
+import Layout from '@src/components/Layout';
 
 function BlogPage() {
   return <Layout>Blog Page</Layout>;

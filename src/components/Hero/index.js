@@ -21,7 +21,7 @@ function Hero() {
     const targetId = event.currentTarget.getAttribute('href');
     const targetElement = document.querySelector(targetId);
     const targetPosition =
-      targetElement.getBoundingClientRect().top + window.pageYOffset - 50;
+      targetElement.getBoundingClientRect().top + window.pageYOffset - 150;
 
     // Smooth scroll to the target element
     animateScrollTo(targetPosition);

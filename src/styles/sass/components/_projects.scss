@@ -19,17 +19,19 @@
   }
 }
 .project-content {
+  cursor: pointer;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: space-between;
   p,
   ul {
+    align-self: flex-start;
     list-style: none;
-    cursor: pointer;
   }
 
   color: black;
-  height: 500px;
+  height: 600px;
   padding: 2rem;
   h3 {
     font-size: 4rem;
@@ -38,7 +40,7 @@
   z-index: 600;
   button {
     margin: 1rem;
-    width: 50%;
+    width: 80%;
     font-size: 2rem;
   }
 }

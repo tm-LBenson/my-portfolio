@@ -6,7 +6,7 @@ function Projects() {
       name: 'Tune Port',
       description:
         'Application for Spotify premium users officially approved by Spotify for production allows unlimited users. Built with React on Vite, using Mantine, SASS, Express, OAuth, and the Spotify API.',
-      imageUrl: '/tune-port.png',
+      imageUrl: '/site4.png',
       websiteUrl: 'https://tune-port.netlify.app/',
       githubUrl: 'https://github.com/tm-LBenson/tune-port',
       tags: ['React', 'Express', 'OAuth', 'Spotify API'],
@@ -15,7 +15,7 @@ function Projects() {
       name: 'Prodigy Path',
       description:
         'Social media application for mentors and mentees to connect and work together. Built with Node.js, Socket.io, React.js, MongoDB, and Express, which includes role-based access control for added security.',
-      imageUrl: '/prodigy-path.png',
+      imageUrl: '/site2.png',
       websiteUrl: 'https://prodigy-path.netlify.app/',
       githubUrl: 'https://github.com/tm-LBenson/prodigy-path',
       tags: ['Node.js', 'React', 'MongoDB', 'Express', 'Socket.io'],
@@ -24,7 +24,7 @@ function Projects() {
       name: 'YelpCamp',
       description:
         'Full-stack application used for reviewing and sharing campgrounds around the world. Built with Node.Js, Express, EJS, CSS, Bootstrap, MongoDB, Server Side Rendering, Session Cookies,  and Cloudinary.',
-      imageUrl: '/yelp-camp.png',
+      imageUrl: '/site3.png',
       websiteUrl: 'https://yelp-camp-lewis.cyclic.app/',
       githubUrl: 'https://github.com/tm-LBenson/yelp-camp-lewis',
       tags: ['Node.js', 'Express', 'MongoDB', 'Bootstrap', 'Cloudinary'],
@@ -35,7 +35,7 @@ function Projects() {
     <section className="projects-section">
       <div className="projects-container">
         <h2 className="projects-heading">
-          <span>Projects</span>
+          <span>Work I have done</span>
           <hr className="projects-divider" />
         </h2>
         <div className="projects-grid">

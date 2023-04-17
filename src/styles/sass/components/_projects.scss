@@ -8,10 +8,15 @@
 
   h2 {
     font-size: 4rem;
-  }
+    display: flex;
+    align-items: center;
 
-  display: flex;
-  justify-content: center;
+    .projects-divider {
+      flex-grow: 1;
+      border: 0;
+      border-top: 1px solid $portfolio-divider;
+    }
+  }
 }
 
 .projects-container {
@@ -21,8 +26,6 @@
   flex-direction: column;
   padding: 5rem;
   gap: 3rem;
-  @media (max-width: 768px) {
-  }
 }
 
 .projects-grid {

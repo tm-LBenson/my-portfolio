@@ -1,0 +1,56 @@
+.technical-skills-section {
+  padding: 5rem 0;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  h2 {
+    font-size: 4rem;
+  }
+  display: flex;
+  justify-content: center;
+}
+
+.technical-skills-container {
+  width: 50%;
+
+  gap: 5rem;
+}
+
+.technical-skills-heading {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 1rem;
+}
+
+.technical-skills-divider {
+  flex-grow: 1;
+  border: 0;
+  border-top: 1px solid $portfolio-divider;
+}
+
+.technical-skills-text {
+  margin-right: 1rem;
+}
+
+.technical-skills-text ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.technical-skills-text li {
+  margin-bottom: 3rem;
+}
+@media (max-width: 1000px) {
+  .technical-skills-container {
+    width: 50%;
+  }
+}
+
+@media (max-width: 868px) {
+  .technical-skills-container {
+    width: 100%;
+    padding: 5rem;
+  }
+}

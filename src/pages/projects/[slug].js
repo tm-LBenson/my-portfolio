@@ -21,12 +21,13 @@ const CaseStudy = ({ project }) => {
       <Header />
       <div className="case-study">
         <h1>{project.title}</h1>
-        <Image
-          width={600}
-          height={400}
-          src={project.image}
-          alt={project.title}
-        />
+        <div className="case-study__image">
+          <Image
+            fill={true}
+            src={project.image}
+            alt={project.title}
+          />
+        </div>
         {project.video && (
           <video
             width="100%"
@@ -92,7 +93,6 @@ const CaseStudy = ({ project }) => {
           <Icon
             width={'40px'}
             icon="mdi:arrow-back"
-            
           />
           Back to Homepage
         </Link>

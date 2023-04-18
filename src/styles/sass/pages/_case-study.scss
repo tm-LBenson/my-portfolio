@@ -20,7 +20,15 @@
       }
     }
   }
-
+  .case-study__image {
+    width: 80%;
+    height: 400px;
+    position: relative;
+  }
+  .case-study__image > img {
+    position: absolute;
+    object-fit: contain;
+  }
   .back-to-home {
     width: 22rem;
     display: flex;

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Divide as Hamburger } from 'hamburger-react';
-
+import { smoothScroll } from '@src/components/smoothScroll';
+import links from '@src/components/links';
 function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -53,29 +54,23 @@ function MobileNav() {
       />
       <div className={`mobile-nav${isOpen ? ' open' : ''}`}>
         <ul>
-          <li>
-            <a href="#about">About Me</a>
-          </li>
-          <li>
-            <a href="#skills">Skills</a>
-          </li>
-          <li>
-            <a href="#work">Work</a>
-          </li>
-          <li>
-            <a href="#contact">Contact</a>
-          </li>
-          <li>
-            <a
-              href="/resume"
-              className="cta-button"
+          {links.map((link, index) => (
+            <li
+              key={index}
+              className="nav-item"
             >
-              Resume
-            </a>
-          </li>
-          <li>
-            <a href="/blog">Blog</a>
-          </li>
+              <a
+                href={link.href}
+                className={link.cta ? 'cta-button nav-link' : 'nav-link'}
+                onClick={(e) => {
+                  toggleMenu(e);
+                  smoothScroll(e);
+                }}
+              >
+                {link.text}
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
     </>

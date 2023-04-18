@@ -1,63 +1,58 @@
-/* _footer.scss */
-
-// Footer container
-.footer {
-  background-color: $footer-bg;
-  padding: $spacing-lg 0;
-  color: $footer-text-color;
+footer {
+  background-color: $portfolio-primary;
+  padding: 5rem;
+  color: $portfolio-cta-text;
+  font-size: 1rem;
 }
 
-// Footer logo
-.footer-logo {
-  color: $footer-text-color;
-  font-size: $font-size-lg;
-  font-weight: $font-weight-bold;
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.footer-nav {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.credit {
+  text-align: center;
+  font-size: 0.8rem;
+  color: $portfolio-cta-text;
+  margin-top: 1rem;
+}
+.footer-nav li a {
+  color: $portfolio-cta-text;
   text-decoration: none;
-  margin-bottom: $spacing-md;
+  transition: color 0.3s;
 
   &:hover {
-    color: $footer-text-color;
+    color: $portfolio-cta-background-hover;
   }
 }
-
-// Footer columns
-.footer-column {
-  margin-bottom: $spacing-md;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-}
-
-// Footer column title
-.footer-title {
-  font-size: $font-size-md;
-  font-weight: $font-weight-bold;
-  margin-bottom: $spacing-md;
-}
-
-// Footer links
-.footer-links {
-  list-style: none;
-  padding-left: 0;
-}
-
-.footer-link {
-  color: $footer-link-color;
+.social-links li a {
+  color: $portfolio-cta-text;
   text-decoration: none;
-  transition: color 0.3s ease-in-out;
-  margin-bottom: $spacing-sm;
-  display: block;
+  transition: color 0.3s;
 
-  &:hover,
-  &:focus {
-    color: $footer-text-color;
+  &:hover {
+    color: $portfolio-cta-background-hover;
   }
-}
-
-// Footer copyright
-.footer-copyright {
-  font-size: $font-size-sm;
-  margin-top: $spacing-xl;
-  color: $footer-link-color;
 }

@@ -26,6 +26,7 @@
 @import 'components/skills';
 @import 'components/projects';
 @import 'components/contact';
+@import 'components/code';
 
 // Layout
 @import 'layout/header';
@@ -37,7 +38,7 @@
 @import 'pages/about';
 @import 'pages/contact';
 @import 'pages/case-study';
-
+@import 'pages/blog';
 // Themes
 @import 'themes/default';
 @import 'themes/dark-mode';

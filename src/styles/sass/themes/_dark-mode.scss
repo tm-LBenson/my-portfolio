@@ -35,4 +35,39 @@
   .project-content {
     color: $portfolio-text-light;
   }
+  // Blog styles for dark mode
+  .blog-section {
+    .blog-post {
+      background-color: $portfolio-primary-dark;
+      .blog-content {
+        p {
+          color: $portfolio-text-light;
+        }
+      }
+    }
+    a {
+      color: $portfolio-link;
+      &:hover {
+        color: $portfolio-link-hover;
+      }
+    }
+  }
+
+  .blog-post {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: $portfolio-text-light;
+    }
+    pre {
+      background-color: darken($portfolio-primary-dark, 10%);
+      color: $portfolio-text-light;
+      border-radius: 8px;
+      padding: 1rem;
+    }
+  }
+  
 }

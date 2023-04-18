@@ -4,7 +4,8 @@ import Hero from '@src/components/Hero';
 import Layout from '@src/components/Layout';
 import Projects from '@src/components/Projects';
 import TechnicalSkills from '@src/components/Skills';
-
+import Script from 'next/script';
+import prism from './prism';
 function HomePage() {
   return (
     <Layout>
@@ -13,6 +14,7 @@ function HomePage() {
       <TechnicalSkills />
       <Projects />
       <ContactForm />
+      <Script src={prism} />
     </Layout>
   );
 }

@@ -1,7 +1,7 @@
 // pages/projects/[slug].js
 import { Icon } from '@iconify/react';
-import Footer from '@src/components/Layout/Footer';
-import Header from '@src/components/Layout/Header/index.js';
+import Layout from '@src/components/Layout';
+
 import projects from '@src/components/Projects/projects';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -18,7 +18,7 @@ const CaseStudy = ({ project }) => {
   }
   return (
     <>
-      <Header />
+      <Layout >
       <div className="case-study">
         <h1>{project.title}</h1>
         <div className="case-study__image">
@@ -88,7 +88,7 @@ const CaseStudy = ({ project }) => {
         </div>
         <Link
           className="back-to-home"
-          href="/"
+          href="/#work"
         >
           <Icon
             width={'40px'}
@@ -97,7 +97,7 @@ const CaseStudy = ({ project }) => {
           Back to Homepage
         </Link>
       </div>
-      <Footer />
+      </Layout>
     </>
   );
 };

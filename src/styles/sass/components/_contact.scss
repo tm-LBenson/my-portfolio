@@ -1,6 +1,9 @@
 #contact {
   max-width: 30vw;
   margin: auto;
+  @media (max-width: 768px) {
+    max-width: 90vw;
+  }
   h2 {
     font-size: 4rem;
     margin-bottom: 1rem;

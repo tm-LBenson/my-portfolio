@@ -3,23 +3,21 @@
   position: relative;
   width: 100%;
   z-index: 1;
-  h2 {
-    font-size: 4rem;
-  }
   display: flex;
   justify-content: center;
+}
+.technical-skills-section h2 {
+  font-size: 4rem;
 }
 
 .technical-skills-container {
   width: 50%;
-
   gap: 5rem;
 }
 
 .technical-skills-heading {
   display: flex;
   align-items: center;
-
   margin-bottom: 1rem;
 }
 
@@ -44,13 +42,16 @@
 }
 @media (max-width: 1000px) {
   .technical-skills-container {
-    width: 50%;
+    width: 75%;
   }
 }
 
-@media (max-width: 868px) {
+@media (max-width: 768px) {
   .technical-skills-container {
     width: 100%;
-    padding: 5rem;
+    padding: 2rem;
+  }
+  .technical-skills-section h2 {
+    font-size: 3rem;
   }
 }

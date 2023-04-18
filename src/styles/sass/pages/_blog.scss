@@ -7,10 +7,9 @@
   position: relative;
   width: 100%;
   z-index: 1;
-
   h2 {
     font-size: 4rem;
-    color: $blog-heading;
+    color: $portfolio-text-light;
     margin-bottom: 1rem;
   }
 
@@ -19,6 +18,13 @@
   }
 }
 
+.blog-card__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  @media (max-width: 1000px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 // Blog post styles
 .blog-post {
   h1 {
@@ -76,6 +82,49 @@
   gap: 2rem;
 }
 
+.blog-page {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+
+  h2 {
+    font-size: $blog-font * 1.5;
+    color: $blog-heading;
+    margin-bottom: 2rem;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 1.5rem;
+
+      a {
+        font-size: $blog-font;
+        font-weight: bold;
+        color: $portfolio-link;
+        text-decoration: none;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: $portfolio-link-hover;
+        }
+      }
+
+      br {
+        display: none;
+      }
+
+      span {
+        font-size: $blog-font * 0.8;
+        color: $blog-text;
+        display: block;
+        margin-top: 0.5rem;
+      }
+    }
+  }
+}
 @include respond(md) {
   .blog-container {
     display: grid;

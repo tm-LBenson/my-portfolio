@@ -14,13 +14,13 @@ function DesktopNav() {
             key={index}
             className="nav-item"
           >
-            <Link
+            <a
               href={link.href}
               className={link.cta ? 'cta-button nav-link' : 'nav-link'}
               onClick={(e) => smoothScroll(e, router)}
             >
               {link.text}
-            </Link>
+            </a>
           </li>
         ))}
       </ul>

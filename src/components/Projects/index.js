@@ -65,7 +65,7 @@ function Projects() {
     visible: { opacity: 1, scale: 1 },
   };
   return (
-    <section className="projects-section">
+    <section id='work' className="projects-section">
       <div className="projects-container">
         <h2 className="projects-heading">
           <span>Work I have done</span>
@@ -82,7 +82,7 @@ function Projects() {
               onTouchStart={() => handleTouchStart(project.name)}
               onTouchEnd={handleTouchEnd}
             >
-             
+
               <div className="project-content">
                 <h3 className="project-name">
                   <span>{project.name}</span>

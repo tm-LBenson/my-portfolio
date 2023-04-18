@@ -1,16 +1,9 @@
 // DesktopNav.js
-import React from 'react';
+
+import links from '@src/components/links';
+import { smoothScroll } from '@src/components/smoothScroll';
 
 function DesktopNav() {
-  const links = [
-    { href: '#about', text: 'About Me' },
-    { href: '#skills', text: 'Skills' },
-    { href: '#work', text: 'Work' },
-    { href: '#contact', text: 'Contact' },
-    { href: '/resume', text: 'Resume', cta: true },
-    { href: '/blog', text: 'Blog' },
-  ];
-
   return (
     <div className="nav">
       <ul className="nav-links">
@@ -22,6 +15,7 @@ function DesktopNav() {
             <a
               href={link.href}
               className={link.cta ? 'cta-button nav-link' : 'nav-link'}
+              onClick={smoothScroll}
             >
               {link.text}
             </a>

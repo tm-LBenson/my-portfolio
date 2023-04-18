@@ -2,7 +2,10 @@ import Image from 'next/image';
 
 function TechnicalSkills() {
   return (
-    <section className="technical-skills-section">
+    <section
+      id="skills"
+      className="technical-skills-section"
+    >
       <div className="technical-skills-container">
         <div className="technical-skills-text">
           <h2
@@ -26,7 +29,8 @@ function TechnicalSkills() {
               AWS EC2, AWS API Gateway, AWS Lambda
             </li>
             <li>
-              <strong>Front-end tools:</strong>Next.js, Astro, React Native, Bootstrap, Sass
+              <strong>Front-end tools:</strong>Next.js, Astro, React Native,
+              Bootstrap, Sass
             </li>
             <li>
               <strong>ORM tools:</strong> Prisma, Sequelize

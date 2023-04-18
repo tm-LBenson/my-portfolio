@@ -20,5 +20,17 @@
     border-color: $portfolio-secondary-light;
   }
 
+.blog-section {
 
+
+  h2 {
+
+    color: $portfolio-text;
+
+  }
+
+  @include respond(md) {
+    max-width: 95vw;
+  }
+}
 }

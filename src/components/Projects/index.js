@@ -82,27 +82,7 @@ function Projects() {
               onTouchStart={() => handleTouchStart(project.name)}
               onTouchEnd={handleTouchEnd}
             >
-              {hoveredProject === project.name && (
-                <motion.div
-                  className="project-image"
-                  style={{
-                    position: 'fixed',
-                    top: mousePosition.y,
-                    left: mousePosition.x,
-                    pointerEvents: 'none',
-                  }}
-                  initial="hidden"
-                  animate="visible"
-                  variants={imageVariants}
-                >
-                  <Image
-                    src={project.imageUrl}
-                    alt={project.name}
-                    width={600}
-                    height={400}
-                  />
-                </motion.div>
-              )}
+             
               <div className="project-content">
                 <h3 className="project-name">
                   <span>{project.name}</span>

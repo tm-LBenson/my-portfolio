@@ -5,7 +5,7 @@ import Layout from '@src/components/Layout';
 import Projects from '@src/components/Projects';
 import TechnicalSkills from '@src/components/Skills';
 import Script from 'next/script';
-import prism from './prism';
+import prism from '../../public/prism';
 function HomePage() {
   return (
     <Layout>

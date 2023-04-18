@@ -74,18 +74,6 @@
     font-size: 2rem;
   }
 }
-.project-content h3:hover span,
-.project-content ul:hover span,
-.project-content p:hover span {
-  background-color: #ffffff7b;
-  color: black;
-}
-
-.project-content h3 span,
-.project-content ul span,
-.project-content p span {
-  transition: background-color 0.3s, color 0.3s;
-}
 
 .project-buttons {
   display: flex;

@@ -35,11 +35,4 @@
   .project-content {
     color: $portfolio-text-light;
   }
-
-  .project-content h3:hover span,
-  .project-content ul:hover span,
-  .project-content p:hover span {
-    background-color: rgba($portfolio-primary-dark, 0.8);
-    color: $portfolio-text-light;
-  }
 }

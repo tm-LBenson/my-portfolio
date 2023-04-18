@@ -1,36 +1,36 @@
 // smoothScroll.js
-export const smoothScroll = async (event, offset = 150) => {
-  event.preventDefault();
 
-  const targetId = event.currentTarget.getAttribute('href');
-  if (targetId[0] === '/') return;
-  const targetElement = document.querySelector(targetId);
-  const targetPosition =
-    targetElement.getBoundingClientRect().top + window.pageYOffset - offset;
+export const smoothScroll = (event, router) => {
+  const targetId = event.target.getAttribute('href');
 
-  // Smooth scroll to the target element
-  animateScrollTo(targetPosition);
+  // Check if the current route is the homepage
+  if (window.location.pathname === '/') {
+    event.preventDefault();
+
+    const target = document.querySelector(targetId);
+    if (!target) return;
+
+    const targetPosition = target.offsetTop;
+    const startPosition = window.pageYOffset;
+    const distance = targetPosition - startPosition;
+    const duration = 1000;
+    let start = null;
+
+    const step = (timestamp) => {
+      if (!start) start = timestamp;
+      const progress = timestamp - start;
+      window.scrollTo(0, ease(progress, startPosition, distance, duration));
+      if (progress < duration) window.requestAnimationFrame(step);
+    };
+
+    window.requestAnimationFrame(step);
+  } else {
+    // Navigate to the page if not on the homepage
+    router.push(`/${targetId}`);
+  }
 };
 
-const animateScrollTo = (position) => {
-  const duration = 500; // duration of the animation in milliseconds
-  const start = window.pageYOffset;
-  const distance = position - start;
-  let startTime = null;
-
-  const animationStep = (timestamp) => {
-    if (!startTime) startTime = timestamp;
-    const progress = timestamp - startTime;
-    const easeInOut = easeInOutQuad(progress, start, distance, duration);
-    window.scrollTo(0, easeInOut);
-    if (progress < duration) window.requestAnimationFrame(animationStep);
-  };
-
-  window.requestAnimationFrame(animationStep);
-};
-
-// Easing function for smooth animation
-const easeInOutQuad = (t, b, c, d) => {
+const ease = (t, b, c, d) => {
   t /= d / 2;
   if (t < 1) return (c / 2) * t * t + b;
   t--;

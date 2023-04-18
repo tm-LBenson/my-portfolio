@@ -2,9 +2,10 @@ import { useState, useEffect } from 'react';
 import { Divide as Hamburger } from 'hamburger-react';
 import { smoothScroll } from '@src/components/smoothScroll';
 import links from '@src/components/links';
+import { useRouter } from 'next/router';
 function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
-
+  const router = useRouter();
   useEffect(() => {
     if (isOpen) {
       document.body.classList.add('no-scroll');
@@ -64,7 +65,7 @@ function MobileNav() {
                 className={link.cta ? 'cta-button nav-link' : 'nav-link'}
                 onClick={(e) => {
                   toggleMenu(e);
-                  smoothScroll(e);
+                  smoothScroll(e, router);
                 }}
               >
                 {link.text}

@@ -76,6 +76,15 @@ $grid-gutter-width: 1.5rem;
 $transition-duration: 0.3s;
 
 // Portfolio Color Scheme
+// Variables
+$border-radius: 4px;
+$spacing-sm: 0.5rem;
+$spacing-md: 1rem;
+$spacing-lg: 2rem;
+
+$font-size-base: 16px;
+$font-weight-bold: 700;
+
 $portfolio-primary: hsl(210, 50%, 40%);
 $portfolio-primary-dark: hsl(210, 50%, 30%);
 $portfolio-primary-light: hsl(210, 50%, 60%);
@@ -95,3 +104,7 @@ $portfolio-sidebar: hsl(210, 10%, 92%);
 $portfolio-logo: hsl(210, 50%, 40%);
 $portfolio-header: hsl(210, 10%, 20%);
 $portfolio-link-active: hsl(210, 50%, 30%);
+
+$input-border-color: $portfolio-text-light;
+$input-focus-border-color: $portfolio-primary;
+$input-disabled-color: lighten($portfolio-primary-light, 10%);

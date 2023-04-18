@@ -1,5 +1,5 @@
 .hero {
-  max-width: 1200px;
+  max-width: 30vw;
   height: 80vh;
   padding: 3rem;
   display: flex;
@@ -10,6 +10,7 @@
   margin-top: 25rem;
   justify-content: space-between;
   margin-bottom: 20vh;
+  padding-bottom: 10vh;
   h1 {
     margin: 0;
     font-size: $font-size-base;
@@ -48,5 +49,4 @@
       background-color: $portfolio-secondary-dark;
     }
   }
-
 }

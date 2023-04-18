@@ -66,5 +66,93 @@ const projects = [
       'YelpCamp addresses the problem of limited and outdated information on camping destinations, providing a user-generated platform for up-to-date reviews and recommendations on campgrounds around the world.',
     collaborators: null,
   },
+  {
+    name: 'Hexo Blog',
+    slug: 'hexo-blog',
+    shortDescription:
+      'Inaugural blog site built with Hexo and JavaScript, chronicling the journey through Code Fellows.',
+    description:
+      'Developed using Hexo static site generator, featuring articles on data structures, algorithms, and professional growth.',
+    imageUrl: '/site1.png',
+    websiteUrl: 'https://hexo-lbenson-blog.netlify.app',
+    githubUrl: 'https://github.com/your-github/hexo-blog-repo', // Replace with the correct repo URL
+    tags: ['Hexo', 'JavaScript', 'Blog'],
+    title: "Hexo Blog: A Developer's Journey",
+    image: '/site1.png',
+    video: null,
+    whatILearned:
+      'Building the Hexo Blog allowed me to learn about static site generators and improve my writing and communication skills.',
+    whyIBuiltIt:
+      'I created the Hexo Blog to document my experience in Code Fellows and share my knowledge and insights with others.',
+    problemItSolves:
+      'The blog provides a platform for me to share my experiences and lessons learned in software development, helping others who might be on a similar journey.',
+    collaborators: null,
+  },
+  {
+    name: 'Guess A Number',
+    slug: 'guess-a-number',
+    shortDescription:
+      'Retro 8-bit style number guessing game with progressively challenging gameplay.',
+    description:
+      'Created using HTML, CSS, and JavaScript, featuring local storage for tracking high scores.',
+    imageUrl: '/site5.png',
+    websiteUrl: 'https://tm-lbenson.github.io/guessAnumber/',
+    githubUrl: 'https://github.com/tm-LBenson/guessAnumber',
+    tags: ['HTML', 'CSS', 'JavaScript', 'Game'],
+    title: 'Guess A Number: A Retro Number Guessing Game',
+    image: '/site5.png',
+    video: null,
+    whatILearned:
+      'Building Guess A Number helped me to improve my JavaScript skills, as well as my understanding of local storage and game mechanics.',
+    whyIBuiltIt:
+      'I created Guess A Number to experiment with game development and provide a fun, nostalgic gaming experience for users.',
+    problemItSolves:
+      'Guess A Number provides a simple and enjoyable gaming experience, offering a break from daily routine and stress.',
+    collaborators: null,
+  },
+  {
+    name: 'Expense Tracker',
+    slug: 'expense-tracker',
+    shortDescription:
+      'Practical and user-friendly React app for expense tracking and visualization.',
+    description:
+      'Built with React, featuring an intuitive interface for managing personal finances.',
+    imageUrl: '/site6.png',
+    websiteUrl: 'https://expense-cra.netlify.app/',
+    githubUrl: 'https://github.com/tm-LBenson/expense-tracker',
+    tags: ['React', 'Expense Tracking', 'Personal Finance'],
+    title: 'Expense Tracker: Manage Your Finances',
+    image: '/site6.png',
+    video: null,
+    whatILearned:
+      'Building the Expense Tracker allowed me to improve my React skills and learn more about managing state and user inputs.',
+    whyIBuiltIt:
+      'I created the Expense Tracker to help users manage their personal finances more effectively and gain insights into their spending habits.',
+    problemItSolves:
+      'Expense Tracker provides a user-friendly tool for managing and visualizing personal finances, helping users make informed decisions about their spending.',
+    collaborators: null,
+  },
+  {
+    name: 'Analytics Dashboard',
+    slug: 'analytics-dashboard',
+    shortDescription:
+      'Easy-to-install custom NPM package for insightful web analytics and informed decision-making.',
+    description:
+      'Built using JavaScript, featuring visual data representation with graphs and maps for clarity.',
+    imageUrl: '/site7.png',
+    websiteUrl: 'https://analytics-benson.netlify.app/',
+    githubUrl: 'https://github.com/tm-LBenson/analytics-dashboard',
+    tags: ['JavaScript', 'NPM Package', 'Web Analytics'],
+    title: 'Analytics Dashboard: Visualize Your Web Data',
+    image: '/site7.png',
+    video: null,
+    whatILearned:
+      'Building the Analytics Dashboard helped me learn about creating custom NPM packages and working with various data visualization libraries.',
+    whyIBuiltIt:
+      'I created the Analytics Dashboard to offer an easy-to-install analytics solution for web developers to better understand their website traffic and user behavior.',
+    problemItSolves:
+      'The Analytics Dashboard provides an accessible and visually clear way to analyze web data, helping developers make informed decisions about their websites.',
+    collaborators: null,
+  },
 ];
 export default projects;

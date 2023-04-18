@@ -1,4 +1,5 @@
 import About from '@src/components/About';
+import ContactForm from '@src/components/Contact';
 import Hero from '@src/components/Hero';
 import Layout from '@src/components/Layout';
 import Projects from '@src/components/Projects';
@@ -11,6 +12,7 @@ function HomePage() {
       <About />
       <TechnicalSkills />
       <Projects />
+      <ContactForm />
     </Layout>
   );
 }

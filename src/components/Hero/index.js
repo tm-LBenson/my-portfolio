@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect, useRef } from 'react';
+import { motion, useAnimation } from 'framer-motion';
 import AnimatedArrow from './AnimatedArrow';
 
 function Hero() {
   const [scrollPosition, setScrollPosition] = useState(0);
-
+  const arrowControls = useAnimation();
+  const arrowRef = useRef(null);
   useEffect(() => {
     const handleScroll = () => {
       const currentPosition = window.pageYOffset;
@@ -16,15 +17,27 @@ function Hero() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleSmoothScroll = (event) => {
+  const handleSmoothScroll = async (event) => {
     event.preventDefault();
+
+    if (arrowRef.current && arrowControls.get().opacity === 0) {
+      // Prevent scrolling when the arrow is hidden
+      return;
+    }
+
     const targetId = event.currentTarget.getAttribute('href');
     const targetElement = document.querySelector(targetId);
     const targetPosition =
-      targetElement.getBoundingClientRect().top + window.pageYOffset - 50;
+      targetElement.getBoundingClientRect().top + window.pageYOffset - 150;
 
     // Smooth scroll to the target element
     animateScrollTo(targetPosition);
+
+    // Hide the arrow and disable the link
+    if (arrowRef.current) {
+      await arrowControls.start({ opacity: 0 });
+      arrowControls.set({ display: 'none' });
+    }
   };
 
   const animateScrollTo = (position) => {
@@ -79,17 +92,28 @@ function Hero() {
           </a>
         </div>
       </div>
-      <a
-        href="#about"
-        onClick={handleSmoothScroll}
+
+      <motion.div
+        animate={{
+          opacity:
+            scrollPosition < 150
+              ? 1
+              : Math.max(1 - (scrollPosition - 150) / 150, 0),
+          display: scrollPosition < 300 ? 'block' : 'none',
+        }}
+        transition={{ duration: 0.5 }}
       >
-        <motion.div
-          animate={{ opacity: scrollPosition === 0 ? 1 : 0 }}
-          transition={{ duration: 0.5 }}
+        <a
+          href="#about"
+          onClick={handleSmoothScroll}
+          style={{
+            cursor: scrollPosition < 300 ? 'pointer' : 'default',
+            textDecoration: scrollPosition < 300 ? 'underline' : 'none',
+          }}
         >
           <AnimatedArrow />
-        </motion.div>
-      </a>
+        </a>
+      </motion.div>
     </section>
   );
 }

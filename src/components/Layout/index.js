@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import analytics from 'analytics-benson';
 import LoadingOverlay from '../LoadingOverlay/index.js';
 import { useLoadingContext } from '../LoadingOverlay/LoadingContext.js';
+import Head from 'next/head.js';
 
 function Layout({ children }) {
   const { isFirstLoad, setIsFirstLoad } = useLoadingContext();
@@ -24,6 +25,14 @@ function Layout({ children }) {
 
   return (
     <>
+      <Head>
+        <link
+          rel="icon"
+          type="image/svg+xml"
+          href="/LB.svg"
+        />
+      </Head>
+      
       <LoadingOverlay
         onAnimationComplete={setLoading}
         isVisible={isLoading}

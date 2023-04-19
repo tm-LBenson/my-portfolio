@@ -4,7 +4,7 @@ import MobileNav from './MobileNav';
 import DesktopNav from './DesktopNav';
 import Link from 'next/link';
 import DarkModeToggle from './DarkModeToggle';
-import AnimatedLBLogo from './Logo';
+import AnimatedLBLogo from './Logo-header';
 import { useLoadingContext } from '@src/components/LoadingOverlay/LoadingContext';
 
 function Header() {

@@ -11,6 +11,10 @@ export const smoothScroll = (event, router) => {
       router.push('/blog');
       return;
     }
+    if (targetId === '/resume') {
+      router.push('/resume');
+      return;
+    }
     const target = document.querySelector(targetId);
     if (!target) return;
 

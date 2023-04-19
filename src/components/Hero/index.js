@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import AnimatedArrow from './AnimatedArrow';
+import Link from 'next/link';
 
 function Hero() {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -77,12 +78,12 @@ function Hero() {
           experiences with a focus on accessible, and human-centered products.
         </p>
         <div className="cta-buttons">
-          <a
+          <Link
             href="/resume"
             className="resume-button"
           >
             Resume
-          </a>
+          </Link>
           <a
             href="#contact"
             className="contact-button"

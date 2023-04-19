@@ -81,7 +81,6 @@ const ContactForm = () => {
         <br />
       </legend>
       <form
-        netlify
         name="contact"
         method="POST"
         data-netlify="true"

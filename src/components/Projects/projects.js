@@ -5,21 +5,21 @@ const projects = [
     shortDescription:
       'Application for Spotify premium users officially approved by Spotify for production allows unlimited users.',
     description:
-      'Built with React on Vite, using Mantine, SASS, Express, OAuth, and the Spotify API.',
+      'Built with React on Vite, using Mantine, SASS, Express, OAuth, and the Spotify API. The most impressive feature is the custom recommendations. It uses an Express backend, and is approved by Spotify as a supported app, which means we can have unlimited users with open access.',
     imageUrl: '/site4.png',
     websiteUrl: 'https://tune-port.netlify.app/',
     githubUrl: 'https://github.com/tm-LBenson/tune-port',
     tags: ['React', 'Express', 'OAuth', 'Spotify API'],
     title: 'Tune Port: A Spotify Integration',
     image: '/site4.png',
-    video: null, // Add a video URL if available or keep it as null
+    video: null,
     whatILearned:
       'I learned how to integrate with the Spotify API, authenticate users using OAuth, and create a responsive UI using Mantine and SASS.',
     whyIBuiltIt:
       'I built Tune Port to provide a convenient way for Spotify premium users to access and manage their playlists, favorite tracks, and more.',
     problemItSolves:
       'Tune Port solves the problem of navigating through the Spotify app to find and manage playlists and tracks by providing an easy-to-use interface that is accessible through a web browser.',
-    collaborators: null, // Add collaborators if available or keep it as null
+    collaborators: 'Steven Rejdukowski',
   },
 
   {

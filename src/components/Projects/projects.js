@@ -19,7 +19,7 @@ const projects = [
       'I built Tune Port to provide a convenient way for Spotify premium users to access and manage their playlists, favorite tracks, and more.',
     problemItSolves:
       'Tune Port solves the problem of navigating through the Spotify app to find and manage playlists and tracks by providing an easy-to-use interface that is accessible through a web browser.',
-    collaborators: 'Steven Rejdukowski',
+    collaborators: ['Steven Rejdukowski'],
   },
 
   {

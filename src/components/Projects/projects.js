@@ -26,24 +26,38 @@ const projects = [
     name: 'Prodigy Path',
     slug: 'prodigy-path',
     shortDescription:
-      'Social media application for mentors and mentees to connect and work together.',
+      'A comprehensive mentorship application connecting mentors and mentees to facilitate skill development and industry experience.',
     description:
-      'Built with Node.js, Socket.io, React.js, MongoDB, and Express, which includes role-based access control for added security.',
+      'Developed as a capstone project at Code Fellows using Node.js, Socket.io, React.js, MongoDB, Express, Redux, and Jest, featuring role-based access control for enhanced security and a streamlined user experience.',
     imageUrl: '/site2.png',
     websiteUrl: 'https://prodigy-path.netlify.app/',
     githubUrl: 'https://github.com/tm-LBenson/prodigy-path',
-    tags: ['Node.js', 'React', 'MongoDB', 'Express', 'Socket.io'],
-    title: 'Prodigy Path: Social Media for Mentors and Mentees',
+    tags: [
+      'Node.js',
+      'React',
+      'MongoDB',
+      'Express',
+      'Socket.io',
+      'Redux',
+      'Jest',
+    ],
+    title:
+      'Prodigy Path: A Mentorship Platform for Skill Development and Industry Experience',
     image: '/site2.png',
     video: null,
     whatILearned:
-      'Through building Prodigy Path, I gained experience with implementing role-based access control, using Socket.io for real-time communication, and integrating MongoDB and Node.js for backend functionality.',
+      'While building Prodigy Path, I gained invaluable experience in implementing role-based access control, using Socket.io for real-time communication, integrating MongoDB and Node.js for backend functionality, working with Redux for state management, and utilizing Jest for testing. Additionally, working in a team environment taught me the importance of collaboration, communication, and project management.',
     whyIBuiltIt:
-      'I created Prodigy Path to provide a platform for mentors and mentees to connect and work together more effectively and efficiently than through traditional means.',
+      'I developed Prodigy Path as a capstone project at Code Fellows to create a comprehensive platform that connects mentors and mentees, enabling them to collaborate more effectively and efficiently than through conventional methods, while also showcasing my technical skills and abilities.',
     problemItSolves:
-      'Prodigy Path addresses the problem of limited access to mentorship opportunities and inefficient communication between mentors and mentees, providing an all-in-one platform for both parties to connect and collaborate.',
-    collaborators: null,
+      'Prodigy Path addresses the issue of limited access to mentorship opportunities and streamlines communication between mentors and mentees, creating a unified platform for both parties to connect, work together, and enhance their skills and industry knowledge.',
+    collaborators: [
+      'Steven Rejdukowski',
+      'Elias Staehle',
+      'Seth Parker Pierce',
+    ],
   },
+
   {
     name: 'YelpCamp',
     slug: 'yelp-camp',

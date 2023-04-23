@@ -150,22 +150,30 @@ const projects = [
     name: 'Analytics Dashboard',
     slug: 'analytics-dashboard',
     shortDescription:
-      'Easy-to-install custom NPM package for insightful web analytics and informed decision-making.',
+      'A versatile and easy-to-install custom NPM package for insightful web analytics, empowering developers to make informed decisions about their websites.',
     description:
-      'Built using JavaScript, featuring visual data representation with graphs and maps for clarity.',
+      'Built using JavaScript, Vite for the front-end, and Express and MongoDB for the back-end, this custom NPM package features visual data representation with graphs and maps for clarity. It allows developers to sign up and keep track of visits to their website, screen sizes, device types, and locations. The package integrates with websites using NPM or via CDN, offering flexibility and ease of use.',
     imageUrl: '/site7.png',
     websiteUrl: 'https://analytics-benson.netlify.app/',
     githubUrl: 'https://github.com/tm-LBenson/analytics-dashboard',
-    tags: ['JavaScript', 'NPM Package', 'Web Analytics'],
-    title: 'Analytics Dashboard: Visualize Your Web Data',
+    tags: [
+      'JavaScript',
+      'NPM Package',
+      'Web Analytics',
+      'Vite',
+      'Express',
+      'MongoDB',
+    ],
+    title:
+      'Analytics Dashboard: Visualize and Understand Your Web Data with Ease',
     image: '/site7.png',
     video: null,
     whatILearned:
-      'Building the Analytics Dashboard helped me learn about creating custom NPM packages and working with various data visualization libraries.',
+      'Building the Analytics Dashboard helped me learn about creating custom NPM packages, working with various data visualization libraries, understanding the importance of version control, and using Vite, Express, and MongoDB.',
     whyIBuiltIt:
-      'I created the Analytics Dashboard to offer an easy-to-install analytics solution for web developers to better understand their website traffic and user behavior.',
+      'I created the Analytics Dashboard to offer a versatile and easy-to-install analytics solution for web developers, allowing them to better understand their website traffic, user behavior, and other important metrics, while providing flexible integration options.',
     problemItSolves:
-      'The Analytics Dashboard provides an accessible and visually clear way to analyze web data, helping developers make informed decisions about their websites.',
+      'The Analytics Dashboard provides an accessible and visually clear way to analyze web data, helping developers make informed decisions about their websites by tracking visits, screen sizes, device types, and locations. It offers easy integration through NPM or CDN, catering to different developer preferences.',
     collaborators: null,
   },
 ];

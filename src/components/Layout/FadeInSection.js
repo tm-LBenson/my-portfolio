@@ -1,0 +1,38 @@
+import { useEffect, useRef, useState } from 'react';
+import { motion } from 'framer-motion';
+
+const FadeInSection = (props) => {
+  const [isVisible, setVisible] = useState(false);
+  const domRef = useRef();
+
+  useEffect(() => {
+    const currentRef = domRef.current;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => setVisible(entry.isIntersecting));
+      },
+      { rootMargin: '0px' },
+    );
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, []);
+
+  return (
+    <motion.div
+      ref={domRef}
+      animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
+      initial={{ opacity: 0, y: 50 }}
+      transition={{ duration: 0.5 }}
+    >
+      {props.children}
+    </motion.div>
+  );
+};
+
+export default FadeInSection;

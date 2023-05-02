@@ -14,7 +14,7 @@
     li {
       padding: 5px;
       border-radius: 10px;
-      background-color: $portfolio-primary-dark;
+      background-color: $portfolio-secondary-light;
     }
   }
   .blog-card-image {
@@ -56,14 +56,13 @@
     padding: 1rem;
 
     .description {
-      font-size: $blog-font;
+      font-size: 2rem;
       color: $blog-text;
       margin-bottom: 1rem;
     }
 
     .excerpt {
       font-size: 1.8rem;
-      color: $portfolio-text-light;
     }
   }
 }

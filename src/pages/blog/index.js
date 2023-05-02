@@ -16,7 +16,10 @@ export default function Blog({ allPostsData }) {
         <ul className="blog-card__wrapper">
           {allPostsData.map(
             ({ id, date, title, excerpt, author, category, tags, slug }) => (
-              <FadeInSection key={id}>
+              <FadeInSection
+                setReset={false}
+                key={id}
+              >
                 <li
                   key={id}
                   className="blog-card"

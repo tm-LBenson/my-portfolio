@@ -11,6 +11,14 @@ function Header() {
   const { isFirstLoad } = useLoadingContext();
   const [isMobileScreen, setIsMobileScreen] = useState(false);
   const [isScrollingUp, setIsScrollingUp] = useState(true);
+  const [isFirstLoadComplete, setIsFirstLoadComplete] = useState(isFirstLoad);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsFirstLoadComplete(true), 2000);
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
 
   useEffect(() => {
     const handleResize = () => {
@@ -50,32 +58,36 @@ function Header() {
 
   return (
     <>
-      {isFirstLoad && (
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          transition={{
-            duration: 0.5,
-            delay: 2,
-          }}
-          variants={headerVariants}
-        ></motion.div>
+      {!isFirstLoadComplete ? null : (
+        <>
+          {isFirstLoad && (
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              transition={{
+                duration: 0.5,
+                delay: 2,
+              }}
+              variants={headerVariants}
+            ></motion.div>
+          )}
+          <motion.header
+            className={`header${isScrollingUp ? '' : ' slide-up'}`}
+            style={isFirstLoad ? { y: -100, opacity: 0 } : {}}
+          >
+            <Link
+              className="logo"
+              href="/"
+            >
+              <AnimatedLBLogo />
+            </Link>
+            <nav className="nav">
+              {isMobileScreen ? <MobileNav /> : <DesktopNav />}
+              <DarkModeToggle />
+            </nav>
+          </motion.header>
+        </>
       )}
-      <motion.header
-        className={`header${isScrollingUp ? '' : ' slide-up'}`}
-        style={isFirstLoad ? { y: -100, opacity: 0 } : {}}
-      >
-        <Link
-          className="logo"
-          href="/"
-        >
-          <AnimatedLBLogo />
-        </Link>
-        <nav className="nav">
-          {isMobileScreen ? <MobileNav /> : <DesktopNav />}
-          <DarkModeToggle />
-        </nav>
-      </motion.header>
     </>
   );
 }

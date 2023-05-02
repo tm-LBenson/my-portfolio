@@ -27,6 +27,18 @@ const FadeInSection = (props) => {
     };
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.pageYOffset === 0) {
+        setVisible(false);
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <motion.div
       ref={domRef}

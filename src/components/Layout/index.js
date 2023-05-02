@@ -12,13 +12,18 @@ function Layout({ children }) {
   const [isLoading, setLoading] = useState(isFirstLoad);
 
   useEffect(() => {
+    let timer;
     if (isFirstLoad) {
-      setTimeout(() => setLoading(false), 1000);
+      timer = setTimeout(() => setLoading(false), 1000);
       setIsFirstLoad(false);
     } else {
       setLoading(false);
     }
     analytics('My Portfolio', 'd526e49d-cc0f-468f-b04d-f59e21f6365a');
+
+    return () => {
+      if (timer) clearTimeout(timer);
+    };
   }, []);
 
   const { theme } = useTheme();
@@ -32,7 +37,7 @@ function Layout({ children }) {
           href="/LB.svg"
         />
       </Head>
-      
+
       <LoadingOverlay
         onAnimationComplete={setLoading}
         isVisible={isLoading}

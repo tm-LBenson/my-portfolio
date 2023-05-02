@@ -71,12 +71,13 @@
     }
   }
   .blog-card {
-
-
-
+    ul {
+      li {
+        background-color: $portfolio-primary-dark;
+      }
+    }
     .blog-card-image {
       h3 {
-
         color: $portfolio-cta-text;
       }
     }

@@ -12,7 +12,6 @@ const LoadingOverlay = ({ isVisible, onAnimationComplete }) => {
   }, [isLoading, isVisible]);
 
   const handleAnimationComplete = () => {
-    console.log('Animation complete');
     setLoading(false);
     onAnimationComplete(false);
   };

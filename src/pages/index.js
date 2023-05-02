@@ -6,14 +6,23 @@ import Projects from '@src/components/Projects';
 import TechnicalSkills from '@src/components/Skills';
 import Script from 'next/script';
 import prism from '../../public/prism';
+import FadeInSection from '@src/components/Layout/FadeInSection';
 function HomePage() {
   return (
     <Layout>
       <Hero />
-      <About />
-      <TechnicalSkills />
-      <Projects />
-      <ContactForm />
+      <FadeInSection>
+        <About />
+      </FadeInSection>
+      <FadeInSection>
+        <TechnicalSkills />
+      </FadeInSection>
+      <FadeInSection>
+        <Projects />
+      </FadeInSection>
+      <FadeInSection>
+        <ContactForm />
+      </FadeInSection>
       <Script src={prism} />
     </Layout>
   );

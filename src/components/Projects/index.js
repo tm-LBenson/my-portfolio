@@ -3,6 +3,7 @@ import projects from './projects';
 import { useState } from 'react';
 import { isMobile } from 'react-device-detect';
 import { Icon } from '@iconify/react';
+import FadeInSection from '../Layout/FadeInSection';
 
 function Projects() {
   const router = useRouter();
@@ -44,50 +45,51 @@ function Projects() {
         </h2>
         <div className="projects-grid">
           {projects.map((project) => (
-            <div
-              className="project-card"
-              key={project.name}
-              onClick={() => handleProjectClick(project.slug)}
-            >
-              <div className="project-content">
-                <h3 className="project-name">
-                  <span>{project.name}</span>
-                </h3>
-                <Icon
-                  className="folder"
-                  width={'90px'}
-                  icon="material-symbols:folder-outline-rounded"
-                />
-                <div className="project-buttons">
+            <FadeInSection key={project.name}>
+              <div
+                className="project-card"
+                onClick={() => handleProjectClick(project.slug)}
+              >
+                <div className="project-content">
+                  <h3 className="project-name">
+                    <span>{project.name}</span>
+                  </h3>
                   <Icon
-                    width={'35px'}
-                    className="icon"
-                    icon="mdi:github"
-                    onClick={(e) => handleViewCodeClick(e, project.githubUrl)}
+                    className="folder"
+                    width={'90px'}
+                    icon="material-symbols:folder-outline-rounded"
                   />
-                  {project.websiteUrl && (
+                  <div className="project-buttons">
                     <Icon
                       width={'35px'}
                       className="icon"
-                      icon="octicon:link-external-16"
-                      onClick={(e) =>
-                        handleViewWebsiteClick(e, project.websiteUrl)
-                      }
+                      icon="mdi:github"
+                      onClick={(e) => handleViewCodeClick(e, project.githubUrl)}
                     />
-                  )}
+                    {project.websiteUrl && (
+                      <Icon
+                        width={'35px'}
+                        className="icon"
+                        icon="octicon:link-external-16"
+                        onClick={(e) =>
+                          handleViewWebsiteClick(e, project.websiteUrl)
+                        }
+                      />
+                    )}
+                  </div>
+                  <p className="project-description">
+                    <span>{project.description}</span>
+                  </p>
+                  <ul className="project-tags">
+                    {project.tags.map((tag) => (
+                      <li key={tag}>
+                        <span>{tag}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <p className="project-description">
-                  <span>{project.description}</span>
-                </p>
-                <ul className="project-tags">
-                  {project.tags.map((tag) => (
-                    <li key={tag}>
-                      <span>{tag}</span>
-                    </li>
-                  ))}
-                </ul>
               </div>
-            </div>
+            </FadeInSection>
           ))}
         </div>
       </div>

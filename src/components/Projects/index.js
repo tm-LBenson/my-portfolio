@@ -35,7 +35,7 @@ function Projects() {
   };
   return (
     <section
-      id="work"
+
       className="projects-section"
     >
       <div className="projects-container">

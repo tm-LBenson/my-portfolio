@@ -3,7 +3,7 @@ import ContactForm from './ContactForm';
 
 export default function Contact() {
   return (
-    <div id="contact">
+    <div>
       <h2 className="about-heading">
         <span>Reach out!</span>
         <hr className="about-divider" />

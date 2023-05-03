@@ -3,7 +3,7 @@ import Image from 'next/image';
 function TechnicalSkills() {
   return (
     <section
-      id="skills"
+      
       className="technical-skills-section"
     >
       <div className="technical-skills-container">

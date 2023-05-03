@@ -6,7 +6,7 @@ function About() {
       <div className="about-container">
         <div className="about-text">
           <h2
-            id="about"
+
             className="about-heading"
           >
             <span>About Me</span>

@@ -11,15 +11,19 @@ function HomePage() {
   return (
     <Layout>
       <Hero />
+      <div id="about"></div>
       <FadeInSection>
         <About />
       </FadeInSection>
+      <div id="skills"></div>
       <FadeInSection>
         <TechnicalSkills />
       </FadeInSection>
+      <div id="work"></div>
       <FadeInSection>
         <Projects />
       </FadeInSection>
+        <div id="contact"></div>
       <FadeInSection>
         <ContactForm />
       </FadeInSection>

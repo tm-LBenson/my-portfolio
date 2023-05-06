@@ -46,7 +46,7 @@ const FadeInSection = (props) => {
       ref={domRef}
       animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
       initial={{ opacity: 0, y: 50 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.5, delay: isVisible ? 0.2 : 0 }}
     >
       {props.children}
     </motion.div>

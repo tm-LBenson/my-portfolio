@@ -21,7 +21,7 @@ This project was built with the following technologies:
 
 ## Live Preview
 
-You can view the live version of this portfolio at https://tm-lewis-benson.netlify.app/
+You can view the live version of this portfolio at https://lewis-benson.io
 
 ## Setup
 

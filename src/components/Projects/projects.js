@@ -5,45 +5,59 @@ const projects = [
     shortDescription:
       'Application for Spotify premium users officially approved by Spotify for production allows unlimited users.',
     description:
-      'Built with React on Vite, using Mantine, SASS, Express, OAuth, and the Spotify API.',
+      'Built with React on Vite, using Mantine, SASS, Express, OAuth, and the Spotify API. The most impressive feature is the custom recommendations. It uses an Express backend, and is approved by Spotify as a supported app, which means we can have unlimited users with open access.',
     imageUrl: '/site4.png',
     websiteUrl: 'https://tune-port.netlify.app/',
     githubUrl: 'https://github.com/tm-LBenson/tune-port',
     tags: ['React', 'Express', 'OAuth', 'Spotify API'],
     title: 'Tune Port: A Spotify Integration',
     image: '/site4.png',
-    video: null, // Add a video URL if available or keep it as null
+    video: null,
     whatILearned:
       'I learned how to integrate with the Spotify API, authenticate users using OAuth, and create a responsive UI using Mantine and SASS.',
     whyIBuiltIt:
       'I built Tune Port to provide a convenient way for Spotify premium users to access and manage their playlists, favorite tracks, and more.',
     problemItSolves:
       'Tune Port solves the problem of navigating through the Spotify app to find and manage playlists and tracks by providing an easy-to-use interface that is accessible through a web browser.',
-    collaborators: null, // Add collaborators if available or keep it as null
+    collaborators: ['Steven Rejdukowski'],
   },
 
   {
     name: 'Prodigy Path',
     slug: 'prodigy-path',
     shortDescription:
-      'Social media application for mentors and mentees to connect and work together.',
+      'A comprehensive mentorship application connecting mentors and mentees to facilitate skill development and industry experience.',
     description:
-      'Built with Node.js, Socket.io, React.js, MongoDB, and Express, which includes role-based access control for added security.',
+      'Developed as a capstone project at Code Fellows using Node.js, Socket.io, React.js, MongoDB, Express, Redux, and Jest, featuring role-based access control for enhanced security and a streamlined user experience.',
     imageUrl: '/site2.png',
     websiteUrl: 'https://prodigy-path.netlify.app/',
     githubUrl: 'https://github.com/tm-LBenson/prodigy-path',
-    tags: ['Node.js', 'React', 'MongoDB', 'Express', 'Socket.io'],
-    title: 'Prodigy Path: Social Media for Mentors and Mentees',
+    tags: [
+      'Node.js',
+      'React',
+      'MongoDB',
+      'Express',
+      'Socket.io',
+      'Redux',
+      'Jest',
+    ],
+    title:
+      'Prodigy Path: A Mentorship Platform for Skill Development and Industry Experience',
     image: '/site2.png',
     video: null,
     whatILearned:
-      'Through building Prodigy Path, I gained experience with implementing role-based access control, using Socket.io for real-time communication, and integrating MongoDB and Node.js for backend functionality.',
+      'While building Prodigy Path, I gained invaluable experience in implementing role-based access control, using Socket.io for real-time communication, integrating MongoDB and Node.js for backend functionality, working with Redux for state management, and utilizing Jest for testing. Additionally, working in a team environment taught me the importance of collaboration, communication, and project management.',
     whyIBuiltIt:
-      'I created Prodigy Path to provide a platform for mentors and mentees to connect and work together more effectively and efficiently than through traditional means.',
+      'I developed Prodigy Path as a capstone project at Code Fellows to create a comprehensive platform that connects mentors and mentees, enabling them to collaborate more effectively and efficiently than through conventional methods, while also showcasing my technical skills and abilities.',
     problemItSolves:
-      'Prodigy Path addresses the problem of limited access to mentorship opportunities and inefficient communication between mentors and mentees, providing an all-in-one platform for both parties to connect and collaborate.',
-    collaborators: null,
+      'Prodigy Path addresses the issue of limited access to mentorship opportunities and streamlines communication between mentors and mentees, creating a unified platform for both parties to connect, work together, and enhance their skills and industry knowledge.',
+    collaborators: [
+      'Steven Rejdukowski',
+      'Elias Staehle',
+      'Seth Parker Pierce',
+    ],
   },
+
   {
     name: 'YelpCamp',
     slug: 'yelp-camp',
@@ -136,22 +150,30 @@ const projects = [
     name: 'Analytics Dashboard',
     slug: 'analytics-dashboard',
     shortDescription:
-      'Easy-to-install custom NPM package for insightful web analytics and informed decision-making.',
+      'A versatile and easy-to-install custom NPM package for insightful web analytics, empowering developers to make informed decisions about their websites.',
     description:
-      'Built using JavaScript, featuring visual data representation with graphs and maps for clarity.',
+      'Built using JavaScript, Vite for the front-end, and Express and MongoDB for the back-end, this custom NPM package features visual data representation with graphs and maps for clarity. It allows developers to sign up and keep track of visits to their website, screen sizes, device types, and locations. The package integrates with websites using NPM or via CDN, offering flexibility and ease of use.',
     imageUrl: '/site7.png',
     websiteUrl: 'https://analytics-benson.netlify.app/',
     githubUrl: 'https://github.com/tm-LBenson/analytics-dashboard',
-    tags: ['JavaScript', 'NPM Package', 'Web Analytics'],
-    title: 'Analytics Dashboard: Visualize Your Web Data',
+    tags: [
+      'JavaScript',
+      'NPM Package',
+      'Web Analytics',
+      'Vite',
+      'Express',
+      'MongoDB',
+    ],
+    title:
+      'Analytics Dashboard: Visualize and Understand Your Web Data with Ease',
     image: '/site7.png',
     video: null,
     whatILearned:
-      'Building the Analytics Dashboard helped me learn about creating custom NPM packages and working with various data visualization libraries.',
+      'Building the Analytics Dashboard helped me learn about creating custom NPM packages, working with various data visualization libraries, understanding the importance of version control, and using Vite, Express, and MongoDB.',
     whyIBuiltIt:
-      'I created the Analytics Dashboard to offer an easy-to-install analytics solution for web developers to better understand their website traffic and user behavior.',
+      'I created the Analytics Dashboard to offer a versatile and easy-to-install analytics solution for web developers, allowing them to better understand their website traffic, user behavior, and other important metrics, while providing flexible integration options.',
     problemItSolves:
-      'The Analytics Dashboard provides an accessible and visually clear way to analyze web data, helping developers make informed decisions about their websites.',
+      'The Analytics Dashboard provides an accessible and visually clear way to analyze web data, helping developers make informed decisions about their websites by tracking visits, screen sizes, device types, and locations. It offers easy integration through NPM or CDN, catering to different developer preferences.',
     collaborators: null,
   },
 ];

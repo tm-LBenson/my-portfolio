@@ -9,6 +9,7 @@ This is a project that showcases my skills and experience as a developer. The po
 - Detailed information about my skills and experience
 - A gallery of projects I have worked on
 - Contact form to get in touch with me
+- Tech blog to share my experiences with the world
 
 ## Technologies
 
@@ -16,7 +17,7 @@ This project was built with the following technologies:
 
 - Next.js
 - React.js
-- CSS
+- SASS
 - HTML
 
 ## Live Preview

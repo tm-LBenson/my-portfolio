@@ -3,7 +3,7 @@ import ContactForm from './ContactForm';
 
 export default function Contact() {
   return (
-    <div>
+    <section className="projects-section">
       <h2 className="about-heading">
         <span>Reach out!</span>
         <hr className="about-divider" />
@@ -51,6 +51,6 @@ export default function Contact() {
         </li>
       </ul>
       <ContactForm />
-    </div>
+    </section>
   );
 }
